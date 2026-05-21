@@ -59,6 +59,17 @@ end
 ```bash
 #!/bin/bash
 
+echo "Instalando dependências padrão..."
+apt-get install -y \
+openjdk-17-jdk \
+wget \
+curl \
+gnupg2 \
+ca-certificates \
+lsb-release \
+apt-transport-https \
+software-properties-common
+
 apt-get update
 apt-get install -y nginx
 cp -r /vagrant/site/* /var/www/html/
