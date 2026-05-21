@@ -1,10 +1,9 @@
 # Laboratório para aprender a subir uma VM com o Vagrant
 
 ## Pré-requisitos:
-Windows 8+
-Instalar Vagrant - Next next finish no setup
-Instalar Oracle VirtualBox - Next next finish no setup também
-
+#### Windows 8+ 
+#### Instalar Vagrant - Next next finish no setup 
+#### Instalar Oracle VirtualBox - Next next finish no setup também
 
 ## Comandos úteis Vagrant:
 ### Iniciar vagrant
