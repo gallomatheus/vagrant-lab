@@ -122,3 +122,44 @@ vagrant plugin install vagrant-vbguest
 ```bash
 vagrant plugin uninstall vagrant-vbguest
 ```
+
+
+# Instalar Docker
+```bash
+echo "Atualizando repositórios..."
+apt-get update
+
+echo "Instalando Docker..."
+apt-get install -y \
+docker-ce \
+docker-ce-cli \
+containerd.io \
+docker-buildx-plugin \
+docker-compose-plugin
+
+echo "Habilitando Docker..."
+systemctl enable docker
+systemctl start docker
+```
+
+
+# Instalar Jenkins
+```bash
+echo "Baixando Jenkins..."
+
+wget -O /tmp/jenkins.deb \
+https://pkg.jenkins.io/debian-stable/binary/jenkins_2.504.1_all.deb
+
+echo "Instalando Jenkins..."
+dpkg -i /tmp/jenkins.deb || apt-get install -f -y
+
+echo "Adicionando o usuário vagrant ao grupo Docker para permitir o uso do Docker sem sudo"
+sudo usermod -aG docker jenkins
+
+echo "Habilitando Jenkins..."
+systemctl enable jenkins
+systemctl start jenkins
+```
+
+
+
