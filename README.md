@@ -29,6 +29,9 @@ vagrant reload --provision
 ###  Destruir VM
 vagrant destroy -f
 
+### Verificar boxes instaladas
+vagrant box list
+
 
 ###  Exemplo de Vagrantfile:
 Vagrant.configure("2") do |config|
