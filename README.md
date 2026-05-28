@@ -234,8 +234,9 @@ vagrant ssh-config
 ```
 
 ### Validar Vagrantfile
+```bash
 vagrant validate
-
+```
 
 
 # Troubleshooting:
